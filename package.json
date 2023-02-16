@@ -1,0 +1,30 @@
+{
+  "name": "dmcuocdoi",
+  "version": "1.0.0",
+  "description": "backend nodejs dmcuocdoi",
+  "main": "./src/server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon --exec babel-node src/server.js"
+  },
+  "keywords": [
+    "nodejs"
+  ],
+  "author": "daoduchuy",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.20.1",
+    "dotenv": "^8.2.0",
+    "ejs": "^3.1.8",
+    "express": "^4.18.2",
+    "mysql2": "^2.2.5",
+    "sequelize": "^6.28.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.12.10",
+    "@babel/node": "^7.12.10",
+    "@babel/preset-env": "^7.12.10",
+    "nodemon": "^2.0.20",
+    "sequelize-cli": "^6.2.0"
+  }
+}
