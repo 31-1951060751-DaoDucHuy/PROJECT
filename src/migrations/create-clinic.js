@@ -1,16 +1,17 @@
-'use strict';
+"use strict";
 const { sequelize } = require("../models");
 module.exports = {
   up: async (queryInterface, sequelize) => {
-    await queryInterface.createTable('clinics', {
-    
+    await queryInterface.createTable("clinics", {
       id: {
         allowNull: false,
         autoIncrement: true,
         primaryKey: true,
         type: sequelize.INTEGER,
       },
-      
+      name: {
+        type: sequelize.STRING,
+      },
       address: {
         type: sequelize.STRING,
       },
@@ -20,18 +21,17 @@ module.exports = {
       igage: {
         type: sequelize.STRING,
       },
-      createdAt:
-       {
+      createdAt: {
         allowNull: false,
         type: sequelize.DATE,
       },
       updatedAt: {
         allowNull: false,
         type: sequelize.DATE,
-      }
+      },
     });
   },
   down: async (queryInterface, Sequelize) => {
-    await queryInterface.dropTable('clinics');
-  }
+    await queryInterface.dropTable("clinics");
+  },
 };
