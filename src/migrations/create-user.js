@@ -1,9 +1,8 @@
-'use strict';
+"use strict";
 const { sequelize } = require("../models");
 module.exports = {
   up: async (queryInterface, sequelize) => {
-    await queryInterface.createTable('users', {
-    
+    await queryInterface.createTable("users", {
       id: {
         allowNull: false,
         autoIncrement: true,
@@ -40,18 +39,17 @@ module.exports = {
       image: {
         type: sequelize.STRING,
       },
-      createdAt:
-       {
+      createdAt: {
         allowNull: false,
         type: sequelize.DATE,
       },
       updatedAt: {
         allowNull: false,
         type: sequelize.DATE,
-      }
+      },
     });
   },
   down: async (queryInterface, Sequelize) => {
-    await queryInterface.dropTable('users');
-  }
+    await queryInterface.dropTable("users");
+  },
 };
