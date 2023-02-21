@@ -22,6 +22,9 @@ let postCRUD = async (req, res) => {
   console.log(message);
   return res.send("wrong password");
 };
+let displaygetCRUD = (req, res) => {
+  return res.send("oke");
+};
 module.exports = {
   getHomePage: getHomePage,
   getAboutPage: getAboutPage,
